@@ -1,0 +1,24 @@
+{
+  "name": "electrumx.public.dappnode.eth",
+  "version": "0.0.1",
+  "description": "A personal Electrum server",
+  "avatar": "",
+  "type": "service",
+  "image": {
+    "path": "",
+    "hash": "",
+    "size": "",
+    "restart": "always",
+    "ports": ["50002:50002"],
+    "volumes": ["electrumx_data:/data"],
+    "environment": [
+      "ELECTRUMX_USERNAME=",
+      "ELECTRUMX_PASSWORD=",
+      "ELECTRUMX_HOSTNAME=",
+      "ELECTRUMX_PORT=",
+      "ELECTRUMX_COIN="
+    ]
+  },
+  "author": "vdo",
+  "license": "MIT"
+}
