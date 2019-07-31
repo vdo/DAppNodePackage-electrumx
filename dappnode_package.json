@@ -2,21 +2,25 @@
   "name": "electrumx.public.dappnode.eth",
   "version": "0.0.1",
   "description": "A personal Electrum server",
-  "avatar": "",
+  "avatar": "/ipfs/QmQT1BkQDcCW5Qdip3eigrgnxKqyrmrjkxXejwHsA3dHaz",
   "type": "service",
   "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
+    "path": "electrumx.public.dappnode.eth_0.0.1.tar.xz",
+    "hash": "/ipfs/QmbqmhUNFU2cDWhb4D1t4mLEJKQzLHgwEQDNuujtU3eY5R",
+    "size": 41012408,
     "restart": "always",
-    "ports": ["50002:50002"],
-    "volumes": ["electrumx_data:/data"],
+    "ports": [
+      "50002:50002"
+    ],
+    "volumes": [
+      "electrumx_data:/data"
+    ],
     "environment": [
-      "ELECTRUMX_USERNAME=",
-      "ELECTRUMX_PASSWORD=",
-      "ELECTRUMX_HOSTNAME=",
-      "ELECTRUMX_PORT=",
-      "ELECTRUMX_COIN="
+      "ELECTRUMX_USERNAME=dappnode",
+      "ELECTRUMX_PASSWORD=dappnode",
+      "ELECTRUMX_HOSTNAME=bitcoin.dappnode",
+      "ELECTRUMX_PORT=8332",
+      "ELECTRUMX_COIN=BitcoinSegwit"
     ]
   },
   "author": "vdo",
