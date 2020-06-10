@@ -5,6 +5,9 @@
   "description": "A personal Electrum server",
   "avatar": "/ipfs/QmQT1BkQDcCW5Qdip3eigrgnxKqyrmrjkxXejwHsA3dHaz",
   "type": "service",
-  "author": "vdo",
-  "license": "MIT"
+  "author": "vdo@dappnode.io",
+  "license": "MIT",
+  "dependencies": {
+    "bitcoin.dnp.dappnode.eth": "latest"
+  }
 }
