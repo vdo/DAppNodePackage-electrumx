@@ -1,5 +1,18 @@
 version: '3.4'
 services:
   electrumx.public.dappnode.eth:
-    image: 'electrumx.public.dappnode.eth:0.0.1'
+    image: 'electrumx.public.dappnode.eth:0.0.2'
     build: ./build
+    restart: always
+    ports:
+      - '50002:50002'
+    volumes:
+      - 'data:/data'
+    environment:
+      - ELECTRUMX_USERNAME=dappnode
+      - ELECTRUMX_PASSWORD=dappnode
+      - ELECTRUMX_HOSTNAME=bitcoin.dappnode
+      - ELECTRUMX_PORT=8332
+      - ELECTRUMX_COIN=BitcoinSegwit
+volumes:
+  data: {}

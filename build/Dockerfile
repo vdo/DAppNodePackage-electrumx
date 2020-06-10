@@ -1,17 +1,16 @@
-FROM python:3.7-alpine3.9
-ENV VERSION 1.12.0
+FROM python:3.8-alpine3.11
+ENV VERSION 1.15.0
 
 COPY ./init /usr/local/bin
 
 RUN chmod a+x /usr/local/bin/* && \
-    apk add --no-cache git build-base openssl && \
-    apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community leveldb-dev && \
+    apk add --no-cache git build-base openssl leveldb-dev && \
     apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing rocksdb-dev && \
     pip install aiohttp pylru plyvel websockets python-rocksdb && \
     git clone -b $VERSION https://github.com/kyuupichan/electrumx.git && \
     cd electrumx && \
     python setup.py install && \
-    apk del git build-base && \
+    apk del git build-base leveldb-dev rocksdb-dev && \
     rm -rf /tmp/*
 
 VOLUME ["/data"]
