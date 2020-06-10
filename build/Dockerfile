@@ -10,7 +10,7 @@ RUN chmod a+x /usr/local/bin/* && \
     git clone -b $VERSION https://github.com/kyuupichan/electrumx.git && \
     cd electrumx && \
     python setup.py install && \
-    apk del git build-base leveldb-dev rocksdb-dev && \
+    apk del git build-base && \
     rm -rf /tmp/*
 
 VOLUME ["/data"]

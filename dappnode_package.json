@@ -1,6 +1,6 @@
 {
   "name": "electrumx.public.dappnode.eth",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "upstreamVersion": "1.15.0",
   "description": "A personal Electrum server",
   "avatar": "/ipfs/QmQT1BkQDcCW5Qdip3eigrgnxKqyrmrjkxXejwHsA3dHaz",
